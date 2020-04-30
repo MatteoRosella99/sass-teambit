@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #58402c;
+  font-family: "Lato", sans-serif;
 }
 
 ul {
@@ -36,14 +38,58 @@ nav .right ul li {
   padding: 10px;
 }
 
+nav .right ul li:hover {
+  color: #30488f;
+  cursor: pointer;
+}
+
+nav .right ul li:hover i {
+  color: #30488f;
+}
+
+nav .right ul li:hover .none {
+  display: grid;
+}
+
+nav .right ul li i {
+  padding-left: 3px;
+}
+
 nav .right ul li .none {
   display: none;
+  position: absolute;
+  top: 44px;
+  background-color: white;
+  border-radius: 5px;
+  border: solid 1px grey;
 }
 
 nav .right button {
   display: inline-block;
-  padding: 10px 15px;
-  margin: 10px;
+  padding: 9px 12px;
+  margin: 12px;
+  border: 1px solid #30488f;
+  background-color: white;
+  border-radius: 5px;
+  color: #30488f;
+  transition: ease-in-out 0.3s;
+}
+
+nav .right button:hover {
+  background-color: #30488f;
+  color: white;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+nav .right button:hover i {
+  color: white;
+}
+
+nav .right button i {
+  margin-right: 5px;
+  color: #30488f;
+  transition: ease-in-out 0.3s;
 }
 
 nav .left {
@@ -52,6 +98,10 @@ nav .left {
 
 nav #logo {
   height: 60px;
+}
+
+nav #logo:hover {
+  cursor: pointer;
 }
 
 header {
@@ -85,6 +135,19 @@ header .left p {
   margin-bottom: 30px;
 }
 
+header .left .email:hover {
+  color: #30488f;
+  cursor: pointer;
+}
+
+header .left .email:hover i {
+  color: #30488f;
+}
+
+header .left .email i {
+  margin-left: 5px;
+}
+
 header .right {
   float: right;
   width: 50%;
@@ -96,13 +159,40 @@ header .right img {
 }
 
 header button {
-  padding: 15px 10px;
-  background-color: blue;
+  padding: 10px 17px;
+  background-color: #30488f;
+  color: white;
+  border: solid 1px #30488f;
   border-radius: 8px;
+  transition: ease-in-out 0.3s;
+}
+
+header button:hover {
+  cursor: pointer;
+  background-color: #233465;
+  transition: ease-in-out 0.3s;
+}
+
+header button i {
+  color: white;
+  margin-right: 7px;
 }
 
 header #or {
   padding: 4px;
+}
+
+header #use:hover {
+  color: #30488f;
+  cursor: pointer;
+}
+
+header #use:hover i {
+  color: #30488f;
+}
+
+header #use i {
+  margin-left: 5px;
 }
 
 main .consec {
@@ -203,11 +293,174 @@ main .sectrecin .right p {
 
 main .sectrecin .right span {
   font-size: 24px;
-  color: blue;
+  color: #30488f;
+}
+
+main .sectrecin .right span:hover {
+  cursor: pointer;
+}
+
+main .sectrecin .right span i {
+  color: #30488f;
+  margin-left: 5px;
 }
 
 main .sectrecin .right img {
   padding: 40px;
   height: 300px;
+}
+
+main .secquasei {
+  padding-top: 50px;
+}
+
+main .secquasei:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+main .secquasei .right {
+  text-align: left;
+  width: 50%;
+  float: left;
+}
+
+main .secquasei .right img {
+  height: 500px;
+  padding-left: 40px;
+}
+
+main .secquasei .left {
+  text-align: right;
+  width: 50%;
+  padding-left: calc(50% - 385px);
+  float: left;
+  min-width: 385px;
+}
+
+main .secquasei .left h3 {
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+
+main .secquasei .left p {
+  font-size: 26px;
+  padding-bottom: 20px;
+}
+
+main .secquasei .left span {
+  font-size: 24px;
+  color: #30488f;
+}
+
+main .secquasei .left span:hover {
+  cursor: pointer;
+}
+
+main .secquasei .left span i {
+  margin-left: 5px;
+  color: #30488f;
+}
+
+main .secquasei .left img {
+  padding: 40px;
+  height: 300px;
+}
+
+main .thelast {
+  padding-top: 70px;
+  text-align: center;
+  background-color: #ffe7d2;
+  padding-bottom: 50px;
+}
+
+main .thelast .comment {
+  width: 700px;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  padding: 20px 40px;
+  text-align: left;
+  border-radius: 8px;
+  border: solid 1px grey;
+}
+
+main .thelast .comment:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+main .thelast .comment p {
+  padding: 15px 0;
+  line-height: 28px;
+}
+
+main .thelast .comment .fondatori {
+  float: left;
+}
+
+main .thelast .comment .fondatori img {
+  height: 50px;
+  padding-right: 10px;
+}
+
+main .thelast .comment .fondscritte {
+  float: left;
+}
+
+main .thelast .comment .fondscritte h6 {
+  font-size: 14px;
+  color: #30488f;
+  padding-top: 5px;
+}
+
+main .thelast .comment .fondscritte p {
+  font-size: 11px;
+  padding: 0;
+}
+
+main .thelast button {
+  padding: 10px 17px;
+  background-color: #30488f;
+  color: white;
+  border: solid 1px #30488f;
+  border-radius: 8px;
+  transition: ease-in-out 0.3s;
+}
+
+main .thelast button:hover {
+  cursor: pointer;
+  background-color: #233465;
+  transition: ease-in-out 0.3s;
+}
+
+main .thelast button i {
+  color: white;
+  margin-right: 7px;
+}
+
+main .thelast h2 {
+  font-size: 36px;
+  padding-bottom: 10px;
+}
+
+main .thelast span {
+  padding: 5px;
+}
+
+main .thelast .email:hover {
+  color: #30488f;
+  cursor: pointer;
+}
+
+main .thelast .email:hover i {
+  color: #30488f;
+}
+
+main .thelast .email i {
+  margin-left: 5px;
 }
 

@@ -1,10 +1,31 @@
 @mixin Signup{
-  padding: 15px 10px;
-  background-color: blue;
+  padding: 10px 17px;
+  background-color: #30488f;
+  color: white;
+  border: solid 1px #30488f;
   border-radius: 8px;
+  transition: ease-in-out 0.3s;
+  &:hover{
+    cursor: pointer;
+    background-color: #233465;
+    transition: ease-in-out 0.3s;
+  }
+  i{
+    color: white;
+    margin-right: 7px;
+  }
 }
 @mixin EmailAddress{
-
+  &:hover{
+    i{
+      color: #30488f;
+    }
+    color: #30488f;
+    cursor: pointer;
+  }
+  i{
+    margin-left: 5px;
+  }
 }
 @mixin Align{
   width: 63%;
@@ -14,6 +35,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #58402c;
+  font-family: 'Lato', sans-serif;
 }
 ul{
   list-style-type: none;
@@ -28,19 +51,56 @@ ul{
 nav{
   .right{
     ul{
-        li{
-        display: inline-block;
-        padding: 10px;
+      li{
+        &:hover{
+          color: #30488f;
+          cursor: pointer;
+          i{
+            color: #30488f;
+          }
+          .none{
+            display: grid;
+          }
+        }
+        i{
+          padding-left: 3px;
+        }
         .none{
           display: none;
+          position: absolute;
+          top: 44px;
+          background-color: white;
+          border-radius: 5px;
+          border: solid 1px grey;
         }
+        display: inline-block;
+        padding: 10px;
       }
       display: inline-block;
     }
     button{
+      &:hover{
+        i{
+          color: white;
+        }
+        background-color: #30488f;
+        color: white;
+        cursor: pointer;
+        transition: ease-in-out 0.3s;
+      }
       display: inline-block;
-      padding: 10px 15px;
-      margin: 10px;
+      padding: 9px 12px;
+      margin: 12px;
+      border: 1px solid #30488f;
+      background-color: white;
+      border-radius: 5px;
+      color: #30488f;
+      transition: ease-in-out 0.3s;
+      i{
+        margin-right: 5px;
+        color: #30488f;
+        transition: ease-in-out 0.3s;
+      }
     }
     float: right;
   }
@@ -49,6 +109,9 @@ nav{
   }
   #logo{
     height: 60px;
+    &:hover{
+      cursor: pointer;
+    }
   }
   min-width: 800px;
   @include Align;
@@ -72,6 +135,9 @@ header{
     padding: 20px;
     float: left;
     width: 50%;
+    .email{
+      @include EmailAddress
+    }
   }
   .right{
     img{
@@ -156,7 +222,6 @@ main{
     .left{
       img{
         height: 500px;
-
       }
       min-width: 810px;
       text-align: right;
@@ -173,8 +238,15 @@ main{
         padding-bottom: 20px;
       }
       span{
+        &:hover{
+          cursor: pointer;
+        }
+        i{
+          color: #30488f;
+          margin-left: 5px;
+        }
         font-size: 24px;
-        color: blue;
+        color: #30488f;
       }
       img{
         padding: 40px;
@@ -188,5 +260,110 @@ main{
     }
     min-width: 800px;
     padding-top: 50px;
+  }
+  .secquasei{
+    &:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .right{
+      img{
+        height: 500px;
+        padding-left: 40px;
+      }
+      text-align: left;
+      width: 50%;
+      float: left;
+    }
+    .left{
+      h3{
+        font-size: 28px;
+        padding-bottom: 30px;
+      }
+      p{
+        font-size: 26px;
+        padding-bottom: 20px;
+      }
+      span{
+        &:hover{
+          cursor: pointer;
+        }
+        i{
+          margin-left: 5px;
+          color: #30488f;
+        }
+        font-size: 24px;
+        color: #30488f;
+      }
+      img{
+        padding: 40px;
+        height: 300px;
+      }
+      text-align: right;
+      width: 50%;
+      padding-left: calc(50% - 385px);
+      float: left;
+      min-width: 385px;
+    }
+    padding-top: 50px;
+  }
+  .thelast{
+    .comment{
+      &:after{
+        content: "";
+        display: table;
+        clear: both;
+      }
+      p{
+        padding: 15px 0;
+        line-height: 28px;
+      }
+      .fondatori{
+        img{
+          height: 50px;
+          padding-right: 10px;
+        }
+        float: left;
+      }
+      .fondscritte{
+        h6{
+          font-size: 14px;
+          color: #30488f;
+          padding-top: 5px;
+        }
+        p{
+          font-size: 11px;
+          padding: 0;
+        }
+        float: left;
+      }
+      width: 700px;
+      margin: auto;
+      background-color: white;
+      margin-bottom: 30px;
+      margin-top: 40px;
+      padding: 20px 40px;
+      text-align: left;
+      border-radius: 8px;
+      border: solid 1px grey;
+    }
+    button{
+      @include Signup
+    }
+    h2{
+      font-size: 36px;
+      padding-bottom: 10px;
+    }
+    span{
+      padding: 5px;
+    }
+    .email{
+      @include EmailAddress;
+    }
+    padding-top: 70px;
+    text-align: center;
+    background-color: #ffe7d2;
+    padding-bottom: 50px;
   }
 }
