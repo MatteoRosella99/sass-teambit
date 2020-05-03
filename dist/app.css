@@ -108,7 +108,7 @@ header {
   width: 63%;
   margin: auto;
   padding-top: 140px;
-  height: 700px;
+  padding-bottom: 80px;
   min-width: 1100px;
   margin: auto;
 }
@@ -462,5 +462,151 @@ main .thelast .email:hover i {
 
 main .thelast .email i {
   margin-left: 5px;
+}
+
+footer {
+  width: 1100px;
+  margin: auto;
+  padding-bottom: 80px;
+}
+
+footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer .left {
+  padding-top: 40px;
+  float: left;
+  width: 30%;
+}
+
+footer .left p {
+  float: left;
+  width: 75%;
+  padding-left: 20px;
+  padding-top: 30px;
+  font-size: 16px;
+  padding-right: 20px;
+}
+
+footer .left img {
+  float: left;
+  width: 20%;
+  height: 120px;
+}
+
+footer .left .blue {
+  color: blue;
+}
+
+footer .right {
+  float: left;
+  width: 70%;
+  padding-top: 70px;
+}
+
+footer .right .venti {
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+}
+
+footer .right .venti h4 {
+  padding-bottom: 15px;
+}
+
+footer .right .venti li {
+  line-height: 35px;
+}
+
+footer .right .venti li a {
+  text-decoration: none;
+}
+
+footer .right .venti li a:hover {
+  color: #30488f;
+}
+
+@media screen and (max-width: 1200px) {
+  main .secquasei {
+    text-align: center;
+  }
+
+  main .secquasei .left {
+    float: none;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  main .secquasei .right {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  main .sectrecin .left {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 20px;
+  }
+
+  main .sectrecin .right {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  footer .left {
+    width: 100%;
+    padding: 20px;
+  }
+
+  footer .left img {
+    height: 60px;
+    padding-left: 40px;
+    float: none;
+    display: inline-block;
+  }
+
+  footer .left p {
+    padding-top: 50px;
+    font-size: 22px;
+    float: none;
+    display: inline-block;
+  }
+
+  footer .right {
+    width: 100%;
+  }
+
+  footer .right .venti {
+    width: 50%;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    height: 320px;
+  }
+
+  header {
+    min-width: 0;
+  }
+
+  header .left {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+
+  header .right {
+    width: 100%;
+    margin: auto;
+  }
 }
 
